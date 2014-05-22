@@ -6,8 +6,8 @@ A collection of jQuery plugins.
 
     npm install -g grunt-cli
 
-    git clone url xx
-    cd xx
+    git clone https://github.com/geelweb/jquery-plugins.git
+    cd jquery-plugins
 
     # Install the node module dependencies
     npm install
@@ -31,7 +31,7 @@ Display a preview of the uploaded image. Example:
     <div id="img_preview"></div>
     <input type="file" id="img" data-preview="img_preview" >
 
-    <script src="src/filehandler.js"></script>
+    <script src="geelweb-jquery.min.js"></script>
     <script>
     $('#img').handleImageFile();
     </script>
@@ -77,7 +77,7 @@ Clear a select element
         <option value="2">def</option>
     </select>
 
-    <script src="src/select.js"></script>
+    <script src="geelweb-jquery.min.js"></script>
     <script>
     $('#my_select').clear();
     </script>
@@ -119,6 +119,7 @@ Update an element when another element change
     <select id="first"></select>
     <select id="second" data-trigger="#first" data-url="/get-values/:value"></select>
 
+    <script src="geelweb-jquery.min.js"></script>
     <script>
     $('#second').ajaxUpdate();
     </script>
