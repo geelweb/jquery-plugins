@@ -165,3 +165,21 @@ Default: `function(target, row) { $(target).append(new Option(row['fields']['lab
 
 The callback to apply to each row of the data
 
+## googlemap.js
+
+### googleMap()
+
+display a map
+
+    <div class="gmap" style="width: 100%; height: 250px;"
+        data-latlng="x,y"
+      >
+      <ul class="markers">
+        <li data-notice=""
+            data-latlng="x,y"
+            data-heading="Home"
+            data-body="Marker body"
+            data-icon="marker-icon.png"
+        ></li>
+      </ul>
+    </div>
