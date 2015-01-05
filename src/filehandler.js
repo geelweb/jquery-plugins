@@ -28,10 +28,12 @@
                 img.width = settings.image_width;
 
                 try {
-                    var URL = window.url || window.webkitURL;
+                    var URL = window.URL || window.webkitURL;
                     var imgURL = URL.createObjectURL(file);
                     img.src = imgURL;
-                    URL.revokeObjectURL(imgURL);
+                    img.onload = function(e) {
+                        URL.revokeObjectURL(this.src);
+                    }
                 } catch (e) {
                     try {
                         var fileReader = new FileReader();
